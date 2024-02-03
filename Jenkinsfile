@@ -14,6 +14,7 @@ pipeline {
                         //archiveArtifacts artifacts: 'build/libs/labgradle-*-SNAPSHOT.jar', fingerprint: true
                         //archiveArtifacts artifacts: 'build/libs/*-SNAPSHOT.jar', fingerprint: true
                         archiveArtifacts artifacts: 'target/*.jar', fingerprint: true, onlyIfSuccessful: true
+                        sh 'ls -l'
                     }
             }
 /*            stage('Test') {
