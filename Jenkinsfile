@@ -49,7 +49,7 @@ pipeline {
             }
             stage('Build Image') {
                 steps {
-                    copyArtifacts filter: 'build/libs/labgradle-*-SNAPSHOT.jar',
+                    copyArtifacts filter: '/var/jenkins_home/workspace/pipeline-final@2/target/classes/*.jar',
                                     fingerprintArtifacts: true,
                                     projectName: '${JOB_NAME}',
                                     flatten: true,
