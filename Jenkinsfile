@@ -13,7 +13,7 @@ pipeline {
                         sh 'mvn -B verify'
                         //archiveArtifacts artifacts: 'build/libs/labgradle-*-SNAPSHOT.jar', fingerprint: true
                         //archiveArtifacts artifacts: 'build/libs/*-SNAPSHOT.jar', fingerprint: true
-                        archiveArtifacts artifacts: 'target/*.jar', fingerprint: true, onlyIfSuccessful: true
+                        archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
                         sh 'echo carpetas'
                         sh 'ls -l target/classes/cloud/csonic/labmaven/'
                         sh 'pwd'
