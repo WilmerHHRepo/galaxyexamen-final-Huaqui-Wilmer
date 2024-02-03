@@ -30,8 +30,7 @@ pipeline {
             }*/
             stage('SonarQube') {
                 steps {
-                    sh 'ls -l target/classes/'
-                    sh 'ls -l target/classes/cloud/csonic/labmaven/'
+                    sh 'pwd'
                     script{
                         def scannerHome = tool 'scanner-default'
                         withSonarQubeEnv('sonar-server') {
