@@ -41,7 +41,7 @@ pipeline {
                             -Dsonar.projectKey=labmaven \
                             -Dsonar.projectName=labmaven \
                             -Dsonar.sources=src/main \
-                            -Dsonar.java.binaries=target/classes \
+                            -Dsonar.java.binaries=/var/jenkins_home/workspace/pipeline-final@2/target/classes \
                             -Dsonar.tests=src/test"
                         }
                     }
