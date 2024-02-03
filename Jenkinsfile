@@ -9,8 +9,10 @@ pipeline {
                     docker { image 'maven:3.6.3-openjdk-11-slim' }
                 }
                     steps {
-                        sh 'gradle build'
-                        archiveArtifacts artifacts: 'build/libs/labgradle-*-SNAPSHOT.jar', fingerprint: true
+                        //sh 'gradle build'
+                        sh 'mvn -B verify'
+                        //archiveArtifacts artifacts: 'build/libs/labgradle-*-SNAPSHOT.jar', fingerprint: true
+                        archiveArtifacts artifacts: 'build/libs/*-SNAPSHOT.jar', fingerprint: true
                     }
             }
 /*            stage('Test') {
