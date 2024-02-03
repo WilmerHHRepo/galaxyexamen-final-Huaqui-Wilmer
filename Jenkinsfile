@@ -31,6 +31,7 @@ pipeline {
             stage('SonarQube') {
                 steps {
                     sh 'pwd'
+                    sh 'ls -l'
                     script{
                         def scannerHome = tool 'scanner-default'
                         withSonarQubeEnv('sonar-server') {
