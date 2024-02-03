@@ -30,7 +30,6 @@ pipeline {
                     script{
                         def scannerHome = tool 'scanner-default'
                         withSonarQubeEnv('sonar-server') {
-                            sh "${scannerHome}/bin/sonar-scanner \
                         sh "${scannerHome}/bin/sonar-scanner \
                             -Dsonar.projectKey=labmaven \
                             -Dsonar.projectName=labmaven \
