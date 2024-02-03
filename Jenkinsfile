@@ -32,6 +32,7 @@ pipeline {
             stage('SonarQube') {
                 steps {
                     sh 'pwd'
+                    sh 'ls -l /var/jenkins_home/workspace/pipeline-final@2'
                     sh 'ls -l'
                     script{
                         def scannerHome = tool 'scanner-default'
