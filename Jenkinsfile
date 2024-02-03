@@ -6,7 +6,7 @@ pipeline {
         stages {
             stage('Build') {
                 agent {
-                    docker { image 'maven:3.6.3-openjdk-11-slim'' }
+                    docker { image 'maven:3.6.3-openjdk-11-slim' }
                 }
                     steps {
                         sh 'gradle build'
